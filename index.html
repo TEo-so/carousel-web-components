@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src = main.js></script>
+</head>
+<body>
+<template id = "img-slider">
+<style>
+    *{
+	margin: 0 auto;
+	padding: 0;
+}
+
+.container{
+	position: relative;
+	margin: 100px auto 0 auto;
+	width: 533px;
+	height: 300px;
+	overflow: hidden;
+}
+.wrap{
+	position: absolute;
+	width: 3731px;
+	height: 300px;
+	background: black;
+	z-index: 1;
+}
+.container .wrap img{
+	float: left;
+	width: 533px;
+	height: 300px;
+}
+
+.container .buttons{
+	position: absolute;
+	bottom: 0;
+	right: 100px;
+	width: 250px;
+	height: 24px;
+	z-index: 2;
+}
+.container .buttons span{
+	display: block;
+	float: left;
+	text-align: center;
+	line-height: 24px;
+	width: 40px;
+	height: 24px;
+	margin-right: 10px;
+	background: pink;
+	cursor: pointer;
+}
+.container .buttons span.on{
+	background: yellow;
+}
+
+.arrow_left,.arrow_right{
+	position: absolute;
+	top: 35%;
+	color: black;
+	font-size: 40px;
+	opacity: 0.6;
+	border-radius: 50%;
+	z-index: 2;
+	padding: 0 14px;
+}
+.arrow_left{
+	left: 10px;
+}
+.arrow_right{
+	right: 10px;
+}
+.arrow_left:hover,.arrow_right:hover{
+	background-color: rgba(0,0,0,0.2);
+}
+</style>
+<div class="container">
+        <div class="wrap" style="left: -533px;">
+            <img src="images/5.jpg" alt="5">
+            <img src="images/1.jpg" alt="1">
+            <img src="images/2.jpg" alt="2">
+            <img src="images/3.jpg" alt="3">
+            <img src="images/4.jpg" alt="4">
+            <img src="images/5.jpg" alt="5">
+            <img src="images/1.jpg" alt="1">
+        </div>
+        <div class="buttons">
+            <span class="on">1</span>
+            <span>2</span>
+            <span>3</span>
+            <span>4</span>
+            <span>5</span>
+        </div>
+        <span class="arrow_left" rel="external nofollow"><</span>
+        <span href="javascript:void(0);" class="arrow_right" rel="external nofollow">></span>
+    </div>
+</template>
+
+
+
+ <img-slider></img-slider> 
+
+</body>
+</html>
